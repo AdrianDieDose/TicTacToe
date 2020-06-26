@@ -2,7 +2,9 @@ const statusDisplay = document.getElementById('game-status');
 
 let gameActive = true;
 
-let currentPlayer = "X";
+let currentPlayer = `<img src="meme.png" alt="">`;
+
+let currentPlayerName = 'Luca';
 
 let gameState =    ["", "", "",
                     "", "", "", 
@@ -19,21 +21,24 @@ const winningConditions = [
     [2, 4, 6]
 ];
 
-const winningMassage = () => `Player ${currentPlayer} has WON !`;
+const winningMassage = () => `Player ${currentPlayerName} has WON !`;
 const drawMassage = () => `Game ended in a draw!`;
-const currentPlayerTurn = () => `Its ${currentPlayer}'s turn!`;
+const currentPlayerTurn = () => `Its ${currentPlayerName}'s turn!`;
 
 statusDisplay.innerHTML = currentPlayerTurn();
+
 function handleCellPlayed(clickedCell, clickedCellIndex) {
 gameState[clickedCellIndex] = currentPlayer;
 clickedCell.innerHTML = currentPlayer;
 }
 
 function handlePlayerChange() {
-    if(currentPlayer === "X") {
-        currentPlayer = "O";
+    if(currentPlayer === `<img src="meme.png" alt="">`) {
+        currentPlayer = `<img src="luca.jpg" alt="">`
+        currentPlayerName = 'Luca';
     } else {
-        currentPlayer = "X";
+        currentPlayer = `<img src="meme.png" alt="">`;
+        currentPlayerName = 'Ricardo';
     }
     statusDisplay.innerHTML = currentPlayerTurn();
 }
@@ -86,7 +91,8 @@ function handleCellClick(clickedCellEvent) {
 
 function handleRestartGame() {
     gameActive = true;
-    currentPlayer = "X";
+    currentPlayerName = 'Luca';
+    currentPlayer = `<img src="luca.jpg" alt="">`;
     gameState =    ["", "", "","", "", "", "", "", "",];
     statusDisplay.innerHTML = currentPlayerTurn();
     document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = "");

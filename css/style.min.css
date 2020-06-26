@@ -48,11 +48,19 @@
   text-align: center;
 }
 
+.main #game-container .cell img {
+  width: 90%;
+}
+
 .main #game-status {
   border: solid 3px black;
   text-align: center;
   width: 20%;
   margin: 0 auto;
+}
+
+.main #game-status img {
+  width: 20%;
 }
 
 .main .restart-game {
