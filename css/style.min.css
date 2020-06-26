@@ -11,7 +11,7 @@
 }
 
 .main h1 {
-  width: 50%;
+  width: 400px;
   margin: auto;
   text-align: center;
   padding-top: 50px;
@@ -22,7 +22,11 @@
   color: #BC2C1A;
 }
 
-.main .game-container {
+.main #deluxe {
+  color: black;
+}
+
+.main #game-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[3];
@@ -31,7 +35,7 @@
   margin: 100px auto;
 }
 
-.main .game-container .cell {
+.main #game-container .cell {
   width: 100px;
   height: 100px;
   -webkit-box-shadow: 0 0 0 1px #333333;
@@ -41,5 +45,23 @@
   cursor: pointer;
   line-height: 100px;
   font-size: 4rem;
+  text-align: center;
+}
+
+.main #game-status {
+  border: solid 3px black;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.main .restart-game {
+  width: 100px;
+  height: 20px;
+  margin: 40px auto;
+  border: solid 1px black;
+  text-align: center;
+  background-color: #D3F3EE;
+  display: block;
 }
 /*# sourceMappingURL=style.min.css.map */
